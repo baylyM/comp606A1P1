@@ -2,15 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--title of page-->
   <title>Sign in</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <!--block at top of form-->
   <div class="header">
+    <!--title of form-->
   	<h2>Login</h2>
   </div>
+  <!--form-->
   <form method="post" action="login.php">
+    <!--tells form to include errors.php
+        which is empty and invisible until
+        form is unsuccessfully submitted-->
   	<?php include('errors.php'); ?>
+    <!--input group used as class name as it is vauge
+        enough to use for all instances and input was
+        better used for input line itself-->
   	<div class="input-group">
   		<label>Username</label>
   		<input type="text" name="username" >
@@ -20,10 +30,12 @@
   		<input type="password" name="password">
   	</div>
   	<div class="input-group">
+      <!--Submits form values-->
   		<button type="submit" class="btn" name="login_user">Login</button>
   	</div>
   	<p>
-  		Not yet a member? <a href="register.php">Sign up</a>
+      <!--changes to Sign Up page-->
+  		Dont have an account? <a href="register.php">Sign up</a>
   	</p>
   </form>
 </body>
